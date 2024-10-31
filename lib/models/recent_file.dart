@@ -1,14 +1,14 @@
 class RecentFile {
   final String icon, title, date, size;
 
-  RecentFile(
+  const RecentFile(
       {required this.icon,
       required this.title,
       required this.date,
       required this.size});
 }
 
-List demoRecentFiles = [
+const List demoRecentFiles = [
   RecentFile(
     icon: "assets/icons/xd_file.svg",
     title: "XD File",

@@ -6,7 +6,7 @@ class CloudStorageInfo {
   final int numOfFiels, percentage;
   final Color color;
 
-  CloudStorageInfo(
+  const CloudStorageInfo(
       {required this.svgSrc,
       required this.title,
       required this.totalStorage,
@@ -15,7 +15,7 @@ class CloudStorageInfo {
       required this.color});
 }
 
-List demoMyFiels = [
+ const List demoMyFiels = [
   CloudStorageInfo(
     title: "Documents",
     numOfFiels: 1328,
