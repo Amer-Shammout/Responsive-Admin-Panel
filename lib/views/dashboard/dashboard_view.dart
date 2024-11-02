@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_admin_panel/constants.dart';
+import 'package:responsive_admin_panel/views/dashboard/widgets/my_files/my_files_section.dart';
 import 'package:responsive_admin_panel/views/dashboard/widgets/storage_details/storage_details_section.dart';
 import 'package:responsive_admin_panel/views/main/widgets/header/custom_header.dart';
 
@@ -8,17 +9,17 @@ class DashboardView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return const SafeArea(
       child: SingleChildScrollView(
-        padding: const EdgeInsets.all(
+        padding: EdgeInsets.all(
           defaultPadding,
         ),
         child: Column(
           children: [
-            const CustomHeader(
+            CustomHeader(
               title: 'Dashboard',
             ),
-            const SizedBox(
+            SizedBox(
               height: defaultPadding,
             ),
             Row(
@@ -26,15 +27,12 @@ class DashboardView extends StatelessWidget {
               children: [
                 Expanded(
                   flex: 5,
-                  child: Container(
-                    color: Colors.white,
-                    height: 500,
-                  ),
+                  child: MyFilesSection(),
                 ),
-                const SizedBox(
+                SizedBox(
                   width: defaultPadding,
                 ),
-                const Expanded(
+                Expanded(
                   flex: 2,
                   child: StorageDetailsSection(),
                 ),
@@ -46,4 +44,3 @@ class DashboardView extends StatelessWidget {
     );
   }
 }
-
