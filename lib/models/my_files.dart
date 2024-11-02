@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_admin_panel/constants.dart';
+import 'package:responsive_admin_panel/utils/app_icons.dart';
 
 class CloudStorageInfo {
   final String svgSrc, title, totalStorage;
@@ -19,7 +20,7 @@ class CloudStorageInfo {
   CloudStorageInfo(
     title: "Documents",
     numOfFiels: 1328,
-    svgSrc: "assets/icons/Documents.svg",
+    svgSrc: Assets.iconsDocuments,
     totalStorage: "1.9GB",
     color: primaryColor,
     percentage: 35,
@@ -27,7 +28,7 @@ class CloudStorageInfo {
   CloudStorageInfo(
     title: "Google Drive",
     numOfFiels: 1328,
-    svgSrc: "assets/icons/google_drive.svg",
+    svgSrc: Assets.iconsGoogleDrive,
     totalStorage: "2.9GB",
     color: Color(0xFFFFA113),
     percentage: 35,
@@ -35,7 +36,7 @@ class CloudStorageInfo {
   CloudStorageInfo(
     title: "One Drive",
     numOfFiels: 1328,
-    svgSrc: "assets/icons/one_drive.svg",
+    svgSrc: Assets.iconsOneDrive,
     totalStorage: "1GB",
     color: Color(0xFFA4CDFF),
     percentage: 10,
@@ -43,7 +44,7 @@ class CloudStorageInfo {
   CloudStorageInfo(
     title: "Documents",
     numOfFiels: 5328,
-    svgSrc: "assets/icons/drop_box.svg",
+    svgSrc: Assets.iconsDropBox,
     totalStorage: "7.3GB",
     color: Color(0xFF007EE5),
     percentage: 78,

@@ -19,9 +19,11 @@ class MyFilesHeader extends StatelessWidget {
           onPressed: () {},
           icon: const Icon(
             Icons.add,
+            color: Colors.white,
           ),
           label: const Text(
             'Add Now',
+            style: TextStyle(color: Colors.white,),
           ),
           style: ElevatedButton.styleFrom(
             backgroundColor: primaryColor,
