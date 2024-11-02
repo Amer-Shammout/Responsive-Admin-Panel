@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_admin_panel/constants.dart';
-import 'package:responsive_admin_panel/views/dashboard/widgets/my_files/my_files_cards_grid_view.dart';
+import 'package:responsive_admin_panel/views/dashboard/widgets/my_files/my_files_card/my_files_cards_grid_view.dart';
 import 'package:responsive_admin_panel/views/dashboard/widgets/my_files/my_files_header.dart';
 
 class MyFilesSection extends StatelessWidget {

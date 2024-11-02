@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_admin_panel/constants.dart';
 import 'package:responsive_admin_panel/models/my_files.dart';
-import 'package:responsive_admin_panel/views/dashboard/widgets/my_files/my_files_card.dart';
+import 'package:responsive_admin_panel/views/dashboard/widgets/my_files/my_files_card/my_files_card.dart';
 
 class MyFilesCardsGridView extends StatelessWidget {
   const MyFilesCardsGridView({
