@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_admin_panel/constants.dart';
-import 'package:responsive_admin_panel/views/dashboard/widgets/storage_details_section.dart';
+import 'package:responsive_admin_panel/views/dashboard/widgets/storage_details/storage_details_section.dart';
 import 'package:responsive_admin_panel/views/main/widgets/header/custom_header.dart';
 
 class DashboardView extends StatelessWidget {
@@ -22,6 +22,7 @@ class DashboardView extends StatelessWidget {
               height: defaultPadding,
             ),
             Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
                   flex: 5,

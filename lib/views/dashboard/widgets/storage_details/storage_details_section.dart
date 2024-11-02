@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_admin_panel/constants.dart';
-import 'package:responsive_admin_panel/views/dashboard/widgets/custom_chart.dart';
+import 'package:responsive_admin_panel/views/dashboard/widgets/storage_details/custom_chart.dart';
 import 'package:responsive_admin_panel/views/dashboard/widgets/custom_container.dart';
-import 'package:responsive_admin_panel/views/dashboard/widgets/storage_details_cards_list.dart';
+import 'package:responsive_admin_panel/views/dashboard/widgets/storage_details/storage_details_cards_list.dart';
 
 class StorageDetailsSection extends StatelessWidget {
   const StorageDetailsSection({
