@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_admin_panel/constants.dart';
+import 'package:responsive_admin_panel/utils/size_config.dart';
 import 'package:responsive_admin_panel/views/dashboard/widgets/my_files/my_files_section.dart';
 import 'package:responsive_admin_panel/views/dashboard/widgets/recent_files/recent_files_section.dart';
 import 'package:responsive_admin_panel/views/dashboard/widgets/storage_details/storage_details_section.dart';
@@ -10,17 +11,17 @@ class DashboardView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: SingleChildScrollView(
-        padding: EdgeInsets.all(
+        padding: const EdgeInsets.all(
           defaultPadding,
         ),
         child: Column(
           children: [
-            CustomHeader(
+            const CustomHeader(
               title: 'Dashboard',
             ),
-            SizedBox(
+            const SizedBox(
               height: defaultPadding,
             ),
             Row(
@@ -30,21 +31,29 @@ class DashboardView extends StatelessWidget {
                   flex: 5,
                   child: Column(
                     children: [
-                      MyFilesSection(),
-                      SizedBox(
+                      const MyFilesSection(),
+                      const SizedBox(
                         height: defaultPadding,
                       ),
-                      RecentFilesSection(),
+                      const RecentFilesSection(),
+                      if (SizeConfig.isMobile(context))
+                        const SizedBox(
+                          height: defaultPadding,
+                        ),
+                      if (SizeConfig.isMobile(context))
+                        const StorageDetailsSection(),
                     ],
                   ),
                 ),
-                SizedBox(
-                  width: defaultPadding,
-                ),
-                Expanded(
-                  flex: 2,
-                  child: StorageDetailsSection(),
-                ),
+                if (!SizeConfig.isMobile(context))
+                  const SizedBox(
+                    width: defaultPadding,
+                  ),
+                if (!SizeConfig.isMobile(context))
+                  const Expanded(
+                    flex: 2,
+                    child: StorageDetailsSection(),
+                  ),
               ],
             ),
           ],

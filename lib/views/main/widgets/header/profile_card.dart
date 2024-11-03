@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_admin_panel/constants.dart';
+import 'package:responsive_admin_panel/utils/size_config.dart';
 
 class ProfileCard extends StatelessWidget {
   const ProfileCard({
@@ -9,24 +10,41 @@ class ProfileCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: defaultPadding,vertical: defaultPadding/2,),
-      margin: const EdgeInsets.only(left: defaultPadding,),
+      padding: const EdgeInsets.symmetric(
+        horizontal: defaultPadding,
+        vertical: defaultPadding / 2,
+      ),
+      margin: const EdgeInsets.only(
+        left: defaultPadding,
+      ),
       decoration: BoxDecoration(
         color: secondaryColor,
-        borderRadius: BorderRadius.circular(10,),
-        border: Border.all(color: Colors.white10,),
+        borderRadius: BorderRadius.circular(
+          10,
+        ),
+        border: Border.all(
+          color: Colors.white10,
+        ),
       ),
       child: Row(
         children: [
-          Image.asset('assets/images/profile_pic.png',),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: defaultPadding/2,),
-            child: Text("Angelina Jolie,",),
+          Image.asset(
+            'assets/images/profile_pic.png',
           ),
-          const Icon(Icons.keyboard_arrow_down,),
+          if (!SizeConfig.isMobile(context))
+            const Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: defaultPadding / 2,
+              ),
+              child: Text(
+                "Angelina Jolie,",
+              ),
+            ),
+          const Icon(
+            Icons.keyboard_arrow_down,
+          ),
         ],
       ),
     );
   }
 }
-

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_admin_panel/constants.dart';
+import 'package:responsive_admin_panel/utils/size_config.dart';
 
 class MyFilesHeader extends StatelessWidget {
   const MyFilesHeader({
@@ -23,13 +24,20 @@ class MyFilesHeader extends StatelessWidget {
           ),
           label: const Text(
             'Add Now',
-            style: TextStyle(color: Colors.white,),
+            style: TextStyle(
+              color: Colors.white,
+            ),
           ),
           style: ElevatedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(
+                12,
+              ),
+            ),
             backgroundColor: primaryColor,
-            padding: const EdgeInsets.symmetric(
+            padding: EdgeInsets.symmetric(
               horizontal: defaultPadding * 1.5,
-              vertical: defaultPadding,
+              vertical: defaultPadding / (SizeConfig.isMobile(context) ? 2 : 1),
             ),
           ),
         ),
