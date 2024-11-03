@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:responsive_admin_panel/constants.dart';
-import 'package:responsive_admin_panel/models/recent_file.dart';
-import 'package:responsive_admin_panel/views/dashboard/widgets/custom_container.dart';
 import 'package:responsive_admin_panel/views/dashboard/widgets/my_files/my_files_section.dart';
 import 'package:responsive_admin_panel/views/dashboard/widgets/recent_files/recent_files_section.dart';
 import 'package:responsive_admin_panel/views/dashboard/widgets/storage_details/storage_details_section.dart';
